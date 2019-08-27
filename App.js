@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text, ScrollView} from 'react-native';
+import {StyleSheet, View, Text, ScrollView, Image} from 'react-native';
 import Nav from './src/nav';
 import Generator  from "./src/genertor"
 import ListItem from "./src/ListItem"
 import Input from "./src/input"
 import Picker from "./src/picker"
+import Cam from './src/assets/images/cam.jpg'
+import Modal from "./src/Modal"
 
 class App extends Component {
   state={
@@ -39,7 +41,12 @@ class App extends Component {
       <ScrollView 
       style={{width:"100%"}} 
       >
-        <Picker/>
+        {/* <Picker/>
+        <Image
+         source={Cam}
+         style={styles.cam}
+        /> */}
+        <Modal/>
       </ScrollView>
       </View>
 
@@ -66,5 +73,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
   },
+  cam:{
+    width:"100%",
+    height:"100%",
+    marginBottom: 400,
+  }
 });
 export default App;

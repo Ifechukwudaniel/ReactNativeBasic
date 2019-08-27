@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {StyleSheet,View, TextInput, Button, Text, Picker, Slider}  from "react-native"
+import {StyleSheet,View, TextInput, Button, Text, Picker, Slider, ActivityIndicator, Image}  from "react-native"
 
 
 export default class PickerComponent extends Component {
@@ -29,6 +29,11 @@ export default class PickerComponent extends Component {
               minimumValue={0}
               step={2}
               onValueChange={this.handleSliderChange}
+              />
+              <ActivityIndicator
+              size={170}
+              color="#00ffff"
+              animating={true}
               />
           </View>
         )
