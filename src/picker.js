@@ -5,7 +5,11 @@ import {StyleSheet,View, TextInput, Button, Text, Picker, Slider}  from "react-n
 export default class PickerComponent extends Component {
     state={
         lanuage:"english",
-        value:50
+        value:8
+    }
+
+    handleSliderChange=(value)=>{
+      this.setState({value: parseInt(value)}) 
     }
 
     render() {
@@ -20,9 +24,11 @@ export default class PickerComponent extends Component {
 
               </Picker>
               <Slider 
-              value={5}
+              value={this.state.value}
               maximumValue={10}
               minimumValue={0}
+              step={2}
+              onValueChange={this.handleSliderChange}
               />
           </View>
         )
