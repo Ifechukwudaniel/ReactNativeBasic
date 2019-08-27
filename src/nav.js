@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'red',
         alignItems: 'center',
         padding: 10, 
-       width: '100%',
+        width: '100%',
     }
 });
 

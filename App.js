@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, ScrollView} from 'react-native';
 import Nav from './src/nav';
 import Generator  from "./src/genertor"
 import ListItem from "./src/ListItem"
+import Input from "./src/input"
 
 class App extends Component {
   state={
@@ -23,17 +24,21 @@ class App extends Component {
   }
   render() {
     return (
-      <View style={styles.mainView}>
-        <Nav name={this.state.nameOfApp} />
-        <View style={styles.basicView}>
-          <Text style={styles.basicText}> Just testing</Text>
-        </View>
-        <View style={styles.basicView}>
-          <Text style={styles.basicText}> React native is cool</Text>
-        </View>
-        <Generator add= {this.handleAdd}/>
-        <ListItem items= {this.state.random} remove={this.handleRemove}/>
-      </View>
+      // <View style={styles.mainView}>
+      //   <Nav name={this.state.nameOfApp} />
+      //   <View style={styles.basicView}>
+      //     <Text style={styles.basicText}> Just testing</Text>
+      //   </View>
+      //   <View style={styles.basicView}>
+      //     <Text style={styles.basicText}> React native is cool</Text>
+      //   </View>
+      //   <Generator add= {this.handleAdd}/>
+      //   <ListItem items= {this.state.random} remove={this.handleRemove}/>
+      // </View>
+      <ScrollView>
+        <Input/>
+      </ScrollView>
+
     );
   }
 }
