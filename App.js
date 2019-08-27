@@ -4,6 +4,7 @@ import Nav from './src/nav';
 import Generator  from "./src/genertor"
 import ListItem from "./src/ListItem"
 import Input from "./src/input"
+import Picker from "./src/picker"
 
 class App extends Component {
   state={
@@ -37,10 +38,8 @@ class App extends Component {
       //   <ListItem items= {this.state.random} remove={this.handleRemove}/> */}
       <ScrollView 
       style={{width:"100%"}} 
-      onContentSizeChange={(w,h)=>alert(h)}
-      onMomentumScrollBegin= {()=>alert("Start")}
       >
-        <Input/>
+        <Picker/>
       </ScrollView>
       </View>
 
