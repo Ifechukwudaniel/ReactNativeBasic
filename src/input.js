@@ -4,7 +4,7 @@ import {StyleSheet,View, TextInput, Button, Text}  from "react-native"
 
 export default class Input extends Component {
     state={
-        inputText: "y3dedgyegd",
+        inputText: "",
         users:['john', 'Doe', 'lisa']
     }
     handleTextChange=(event)=>{

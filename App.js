@@ -24,8 +24,9 @@ class App extends Component {
   }
   render() {
     return (
-      // <View style={styles.mainView}>
-      //   <Nav name={this.state.nameOfApp} />
+      <View style={styles.mainView}>
+        <Nav name={this.state.nameOfApp} />
+      {/* //  
       //   <View style={styles.basicView}>
       //     <Text style={styles.basicText}> Just testing</Text>
       //   </View>
@@ -33,11 +34,15 @@ class App extends Component {
       //     <Text style={styles.basicText}> React native is cool</Text>
       //   </View>
       //   <Generator add= {this.handleAdd}/>
-      //   <ListItem items= {this.state.random} remove={this.handleRemove}/>
-      // </View>
-      <ScrollView>
+      //   <ListItem items= {this.state.random} remove={this.handleRemove}/> */}
+      <ScrollView 
+      style={{width:"100%"}} 
+      onContentSizeChange={(w,h)=>alert(h)}
+      onMomentumScrollBegin= {()=>alert("Start")}
+      >
         <Input/>
       </ScrollView>
+      </View>
 
     );
   }
